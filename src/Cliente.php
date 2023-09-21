@@ -6,6 +6,8 @@ class Cliente {
     public string $senha;
     public array $telefone;
 
-    
+    public function exibirDados() {
+        
+    }
 }
 ?>
