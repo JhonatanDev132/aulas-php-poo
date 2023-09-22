@@ -6,51 +6,28 @@
     <title>Exemplo1</title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 2</h1>
+    <h1>PHP com POO - Exemplo 3</h1>
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Acesso direto às propriedades</li>
-        <li>Atribuição e leitura de dados</li>
-        <li>Chamada de método</li>
-        <li>Uso do <code>$this</code> para acessar recursos dentro da própria Classe</li>
+        <li>
+            Método construtor com atribuição obrigatória de valores 
+            aos parâmetros/propriedades do objeto.
+        </li>
+        <li>
+            Uso do <code>$this</code> para acesso às propriedades
+            dentro do objeto.
+        </li>
     </ul>
 <?php
 // Importando a Classe
 require_once "src/Cliente.php";
+$clienteA = new Cliente("Jhonatan", "jhonatan.vini132@gmail.com");
+$clienteB = new Cliente("Julia", "juliazmedeiros@gmail.com");
 
-// Criando instâncias da Classe (objetos!)
-$clienteA = new Cliente;
-$clienteB = new Cliente;
-
-// Acesso a atribuição
-$clienteA->nome = "Tiago";
-
-$clienteB->nome = "Jhonatan";
-
-$clienteA->telefones = ["4002-8922", "11-97217-0371"];
-
-$clienteA->email = "jhonatan@gmail.com";
-$clienteA->senha = password_hash("123abc", PASSWORD_DEFAULT);
+$clienteA->telefones = ["11 97217-0371"];
+$clienteB->telefones = ["11 98161-9872"];
 ?>
-
-<hr>
-
-<h2>Dados dos objetos(acesso e leitura)</h2>
-<h3> <?= $clienteA->nome ?></h3>
-<h3> E-mail: <?= $clienteA->email ?></h3>
-<p>telefones:
-    <?=$clienteA->telefones[0]?>,
-    <?=$clienteA->telefones[1]?>
-</p>
-
-<p>Telefones:
-    <?=implode(",", $clienteA->telefones)?>
-</p>
-
-<h2>Acessando os dados através de um método</h2>
-<?=$clienteA->exibirDados()?>
-<?=$clienteB->exibirDados()?>
 
 <pre><?=var_dump($clienteA, $clienteB)?></pre>
 </body>
