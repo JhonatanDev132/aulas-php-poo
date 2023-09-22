@@ -22,11 +22,7 @@
 <?php
 // Importando a Classe
 require_once "src/Cliente.php";
-$clienteA = new Cliente("Jhonatan", "jhonatan.vini132@gmail.com");
-$clienteB = new Cliente("Julia", "juliazmedeiros@gmail.com");
 
-$clienteA->telefones = ["11 97217-0371"];
-$clienteB->telefones = ["11 98161-9872"];
 ?>
 
 <pre><?=var_dump($clienteA, $clienteB)?></pre>
