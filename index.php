@@ -10,21 +10,23 @@
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>
-            Método construtor com atribuição obrigatória de valores 
-            aos parâmetros/propriedades do objeto.
-        </li>
-        <li>
-            Uso do <code>$this</code> para acesso às propriedades
-            dentro do objeto.
-        </li>
+        <li>Encapsulamento</li>
+        <li>Modificadores de visibilidade</li>
     </ul>
 <?php
 // Importando a Classe
 require_once "src/Cliente.php";
+$clienteA = new Cliente;
 
+// O código abaixo dará erro pois a propriedade é privada!
+// $clienteA->nome = "Jhonatan";
+
+// Usando o setter para atribuir o valor a propriedade privada "nome"
+$clienteA->setNome("Jhonners")
 ?>
 
-<pre><?=var_dump($clienteA, $clienteB)?></pre>
+<p>Nome: <?=$clienteA->getNome()?> </p>
+
+<pre><?=var_dump($clienteA)?></pre>
 </body>
 </html>
