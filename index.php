@@ -27,7 +27,7 @@ $clienteA->nome = "Tiago";
 
 $clienteB->nome = "Jhonatan";
 
-$clienteA->telefone = ["4002-8922", "11-97217-0371"];
+$clienteA->telefones = ["4002-8922", "11-97217-0371"];
 
 $clienteA->email = "jhonatan@gmail.com";
 $clienteA->senha = password_hash("123abc", PASSWORD_DEFAULT);
@@ -35,9 +35,17 @@ $clienteA->senha = password_hash("123abc", PASSWORD_DEFAULT);
 
 <hr>
 
-<h2>Dados dos objetos</h2>
+<h2>Dados dos objetos(acesso e leitura)</h2>
 <h3> <?= $clienteA->nome ?></h3>
-<h3> <?= $clienteB->nome ?></h3>
+<h3> E-mail: <?= $clienteA->email ?></h3>
+<p>telefones:
+    <?=$clienteA->telefones[0]?>,
+    <?=$clienteA->telefones[1]?>
+</p>
+
+<p>Telefones:
+    <?=implode(",", $clienteA->telefones)?>
+</p>
 
 <pre><?=var_dump($clienteA, $clienteB)?></pre>
 </body>

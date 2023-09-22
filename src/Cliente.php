@@ -4,7 +4,7 @@ class Cliente {
     public string $nome;
     public string $email;
     public string $senha;
-    public array $telefone;
+    public array $telefones;
 
     public function exibirDados() : void {
         
