@@ -3,34 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo1</title>
+    <title>Exemplo5</title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 3</h1>
+    <h1>PHP com POO - Exemplo 5 - Herança</h1>
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Encapsulamento</li>
-        <li>Modificadores de visibilidade</li>
+        <li>Herança(Super Classe e Sub Classe)</li>
     </ul>
-<?php
-// Importando a Classe
-require_once "src/Cliente.php";
-$clienteA = new Cliente;
 
-// O código abaixo dará erro pois a propriedade é privada!
-// $clienteA->nome = "Jhonatan";
 
-// Usando o setter para atribuir o valor a propriedade privada "nome"
-$clienteA->setNome("Jhonners");
-$clienteA->setEmail("jhonatan.vini132@gmail.com");
-$clienteA->setSenha("123abc");
-?>
+    <?php
+    require_once "src/PessoaFisica.php";
+    $clientePF = new PessoaFisica;
+    ?>
 
-<p>Nome: <?=$clienteA->getNome()?> </p>
-<p>Email: <?=$clienteA->getEmail()?> </p>
-<p>Senha: <?=$clienteA->getSenha()?> </p>
-
-<pre><?=var_dump($clienteA)?></pre>
+    <pre><?=var_dump($clientePF)?></pre>
 </body>
 </html>
