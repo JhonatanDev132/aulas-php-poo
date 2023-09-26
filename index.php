@@ -17,6 +17,11 @@
     <?php
     require_once "src/PessoaFisica.php";
     $clientePF = new PessoaFisica;
+
+    $clientePF->setNome("Fulano");
+    $clientePF->setIdade(25);
+    $clientePF->setCpf("123.456.789-00");
+    $clientePF->setEmail("fulano@gmail.com");
     ?>
 
     <pre><?=var_dump($clientePF)?></pre>
