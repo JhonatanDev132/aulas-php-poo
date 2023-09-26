@@ -5,7 +5,7 @@ class PessoaFisica extends Cliente {
     private string $cpf;
 
     public function __construct(){
-        $this->situacao = "normal";
+        $this->setSituacao("Normal");
     }
     
     public function getCpf(): string

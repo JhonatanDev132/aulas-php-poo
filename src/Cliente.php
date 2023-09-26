@@ -1,5 +1,6 @@
 <?php
-class Cliente {
+/* Classe Abstrata */
+abstract class Cliente {
     // Propriedades (ou atributos)
     public string $nome;
     private string $email;
