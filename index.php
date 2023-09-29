@@ -17,19 +17,19 @@
     </ul>
 
     <?php
+require_once "vendor/autoload.php";
 
+   use Clientes\Escola;
+   use Fornecedor\Pagamento;
+   use Prestador\Pagamento as PrestadorPagamento; // ALIAS (Apelido)
 
-   require_once "src/fornecedores/Pagamento.php";
-   require_once "src/prestadores/Pagamento.php";
-
+    $pagamentoFornecedor = new Pagamento;
+    $pagamentoPrestador = new PrestadorPagamento;
+ 
    use Clientes\PessoaFisica;
    use Clientes\PessoaJuridica;
    use Clientes\MEI;
 
-   require_once "src/PessoaFisica.php";
-   require_once "src/PessoaJuridica.php";
-   require_once "src/MEI.php";
-   
     $clientePF = new PessoaFisica;
     $clientePJ = new PessoaJuridica;
     $clienteMEI = new MEI;
@@ -64,6 +64,11 @@
     $clienteMEI->setAreaDeAtuacao("Lojinha");
     echo "Área: ".$clienteMEI->getAreaDeAtuacao()
 
+?>
+
+<?php
+$escola = new Escola;
+var_dump($escola)
 ?>
 
 </body>
