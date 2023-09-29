@@ -1,7 +1,8 @@
 <?php
+namespace Clientes;
 require_once "Cliente.php";
 
-class PessoaJuridica extends Cliente{
+class PessoaJuridica{
 
     private int $anoFundacao;
     private string $cnpj;
@@ -10,7 +11,7 @@ class PessoaJuridica extends Cliente{
     public function __construct()
     {
         /* Acessando o método setter PROTEGIDO (existente em Cliente) */
-        $this->setSituacao("em analise");
+    
     }
 
     // ----------------------------------------------------------------

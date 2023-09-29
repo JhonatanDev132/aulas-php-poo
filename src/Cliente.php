@@ -1,5 +1,6 @@
 <?php
 /* Classe Abstrata */
+namespace Clientes;
 abstract class Cliente {
     // Propriedades (ou atributos)
     public string $nome;
@@ -16,10 +17,11 @@ abstract class Cliente {
         return $this->nome;
     }
 
+    
     public function setEmail(string $email) : void {
         $this->email = filter_var($email, FILTER_SANITIZE_EMAIL);
     }
-
+    
     public function getEmail() : string {
         return $this->email;
     }
@@ -48,4 +50,6 @@ abstract class Cliente {
     }
     
 }
+
+
 ?>
