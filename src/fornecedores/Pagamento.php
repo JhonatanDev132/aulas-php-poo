@@ -1,4 +1,5 @@
-<?php // Fornecedores
+<?php
+namespace Fornecedor; // Fornecedores
 class Pagamento{
 
 }
