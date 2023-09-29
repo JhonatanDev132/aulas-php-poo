@@ -22,8 +22,6 @@
    require_once "src/fornecedores/Pagamento.php";
    require_once "src/prestadores/Pagamento.php";
 
-   
-
    use Clientes\PessoaFisica;
    use Clientes\PessoaJuridica;
    use Clientes\MEI;
