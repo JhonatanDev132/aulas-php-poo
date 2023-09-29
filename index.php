@@ -10,40 +10,17 @@
     <hr>
     <h2>Assuntos abordados:</h2>
     <ul>
-        <li>Namespaces: agrupamento e organização de recursos (classes, funções, constantes)</li>
-        <li>Prevenção de conflitos entre classes de mesmo nome</li>
-        <li>Configurar e usar <code>namespaces</code> e <code>alias</code>.</li>
+        <li>Composer: gerenciador de dependência PHP</li>
+        <li>Configurar o projeto com Composer usando <code>composer.json</code></li>
+        <li>Autoload de classes evitando muitos requires e/ou require manuais</li>
+        
     </ul>
 
     <?php
-    /* Só de fazer o require/importação das classes, já da erro no servidor devido a terem o mesmo nome */
 
-// use Fornecedor\Pagamento;
-// use Prestador\Pagamento as PrestadorPagamento;
 
     require_once "src/fornecedores/Pagamento.php";
     require_once "src/prestadores/Pagamento.php";
-
-    // Forma 1
-
-   // $pagamentoFornecedor = new Fornecedor\Pagamento;
-   // $pagamentoPrestador = new Prestador\Pagamento;
-
-   // Forma 2 de usar classes com namespaces
-   // use Fornecedor\Pagamento;
-   // use Prestador\Pagamento as PrestadorPagamento; // ALIAS (Apelido)
-
-   // $pagamentoFornecedor = new Pagamento;
-   // $pagamentoPrestador = new PrestadorPagamento; // objeto através do alias
-
-   // Forma 3
-   // $pagamentoFornecedor = new Pagamento;
-   // $pagamentoPrestador = new PrestadorPagamento;
-
-   /* Exercícios:
-   - Crie objetos cliente PF, cliente PJ, cliente MEI
-   - Coloque alguns dados usando setters
-   - Exiba alguns dados no HTML */
 
    use Clientes\PessoaFisica;
    use Clientes\PessoaJuridica;
@@ -89,7 +66,5 @@
 
 ?>
 
-    <pre><?=var_dump($pagamentoFornecedor)?></pre>
-    <pre><?=var_dump($pagamentoPrestador)?></pre>
 </body>
 </html>
