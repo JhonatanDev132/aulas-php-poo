@@ -1,0 +1,11 @@
+{
+    "name": "jhonatan/aulas-php-poo",
+    "description": "Exemplo de projeto PHP com Orientação e com classes gerenciadas pelo Composer.",
+    "autoload": {
+        "psr-4": {
+            "Clientes\\": "src/",
+            "Fornecedor\\" : "src/fornecedores",
+            "Prestador\\" : "src/prestadores"
+        }
+    }
+}
